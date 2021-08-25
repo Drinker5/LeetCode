@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using Xunit;
 
-namespace LeetCode.Structures
+namespace LeetCode.Algorithms
 {
     public class HeapSort
     {
