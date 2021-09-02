@@ -5,7 +5,7 @@ using Xunit;
 
 namespace LeetCode.Problems
 {
-    class Permutations
+    class _46_Permutations
     {
         public IList<IList<int>> Solve(int[] input)
         {
@@ -33,11 +33,11 @@ namespace LeetCode.Problems
 
     public class PermutationsTests
     {
-        private readonly Permutations solver;
+        private readonly _46_Permutations solver;
 
         public PermutationsTests()
         {
-            solver = new Permutations();
+            solver = new _46_Permutations();
         }
 
         [Fact]

@@ -1,15 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using Xunit;
+﻿using Xunit;
 
 namespace LeetCode.Problems
 {
-    public class AddTwoNumbers
+    public class _2_AddTwoNumbers
     {
         private readonly Solution s;
 
-        public AddTwoNumbers()
+        public _2_AddTwoNumbers()
         {
             s = new Solution();
         }

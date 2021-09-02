@@ -5,7 +5,7 @@ using Xunit;
 
 namespace LeetCode.Problems._21_09_Week1
 {
-    public class ArrayNesting
+    public class _565_ArrayNesting
     {
         public class Solution
         {
@@ -39,7 +39,7 @@ namespace LeetCode.Problems._21_09_Week1
         }
 
         private Solution s;
-        public ArrayNesting()
+        public _565_ArrayNesting()
         {
             s = new Solution();
         }

@@ -1,15 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Collections.Generic;
 using Xunit;
 
 namespace LeetCode.Problems
 {
-    public class LongestSubstringWithoutRepeatingCharacters
+    public class _3_LongestSubstringWithoutRepeatingCharacters
     {
         private readonly Solution s;
 
-        public LongestSubstringWithoutRepeatingCharacters()
+        public _3_LongestSubstringWithoutRepeatingCharacters()
         {
             s = new Solution();
         }

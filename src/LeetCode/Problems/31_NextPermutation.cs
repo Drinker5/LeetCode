@@ -5,7 +5,7 @@ using Xunit;
 
 namespace TestProject1
 {
-    public class NextPermutation
+    public class _31_NextPermutation
     {
         private readonly Solution solution;
 
@@ -48,7 +48,7 @@ namespace TestProject1
             }
         }
 
-        public NextPermutation()
+        public _31_NextPermutation()
         {
             solution = new Solution();
         }

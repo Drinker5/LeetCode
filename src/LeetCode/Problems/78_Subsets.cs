@@ -3,7 +3,7 @@ using Xunit;
 
 namespace LeetCode.Problems
 {
-    public class Subsets
+    public class _78_Subsets
     {
         public IList<IList<int>> Solve(int[] nums)
         {
@@ -37,11 +37,11 @@ namespace LeetCode.Problems
 
     public class SubsetsTests
     {
-        private readonly Subsets s;
+        private readonly _78_Subsets s;
 
         public SubsetsTests()
         {
-            s = new Subsets();
+            s = new _78_Subsets();
         }
 
         [Fact]
