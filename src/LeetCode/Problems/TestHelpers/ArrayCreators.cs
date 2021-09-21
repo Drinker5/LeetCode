@@ -30,10 +30,29 @@ namespace LeetCode.Problems
             return res;
         }
 
+        /// <summary></summary>
+        /// <param name="input">[1,2,0,7,9,1]</param>
+        public static T[] MakeArray<T>(this string input)
+        {
+            if (string.IsNullOrWhiteSpace(input))
+                throw new ArgumentException();
+
+            var split = input.Trim('[', ']')
+                             .Split(',')
+                             .Where(i => !string.IsNullOrEmpty(i))
+                             .ToArray();
+            var n = split.Length;
+            var res = new T[n];
+            for (int i = 0; i < n; i++)
+                res[i] = Parse<T>(split[i]);
+
+            return res;
+        }
+
         private static T Parse<T>(string v) => (T)Convert.ChangeType(v, typeof(T));
     }
 
-    public class ArrayCreatorsTests
+    public class Make2DArrayTests
     {
         [Theory]
         [InlineData("")]
@@ -126,6 +145,52 @@ namespace LeetCode.Problems
             Assert.Collection(result[1],
                 i => Assert.Equal(2, i),
                 i => Assert.Equal(3, i));
+        }
+    }
+
+    public class MakeArrayTests
+    {
+        [Theory]
+        [InlineData("")]
+        [InlineData(" ")]
+        [InlineData(null)]
+        public void when_error_input(string input)
+        {
+            Assert.Throws<ArgumentException>(() => ArrayCreators.MakeArray<int>(input));
+        }
+
+        [Fact]
+        public void when_empty_array()
+        {
+            var result = ArrayCreators.MakeArray<int>("[]");
+            Assert.Empty(result);
+        }
+
+        [Fact]
+        public void when_one_item()
+        {
+            var result = ArrayCreators.MakeArray<int>("[1]");
+            Assert.Single(result, 1);
+        }
+
+        [Fact]
+        public void when_mupltiple_item()
+        {
+            var result = ArrayCreators.MakeArray<int>("[1,-2,3]");
+            Assert.Collection(result, 
+                i => Assert.Equal(1, i),
+                i => Assert.Equal(-2, i),
+                i => Assert.Equal(3, i));
+        }
+
+        [Fact]
+        public void when_diff_type()
+        {
+            var result = ArrayCreators.MakeArray<string>("[a,be,c]");
+            Assert.Collection(result,
+                i => Assert.Equal("a", i),
+                i => Assert.Equal("be", i),
+                i => Assert.Equal("c", i));
         }
     }
 }
