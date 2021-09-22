@@ -44,12 +44,18 @@ namespace LeetCode.Problems
             var n = split.Length;
             var res = new T[n];
             for (int i = 0; i < n; i++)
-                res[i] = Parse<T>(split[i]);
+                res[i] = Parse<T>(split[i].Trim());
 
             return res;
         }
 
-        private static T Parse<T>(string v) => (T)Convert.ChangeType(v, typeof(T));
+        private static T Parse<T>(string v)
+        {
+            if (typeof(T) == typeof(string))
+                v = v.Trim('"');
+
+            return (T)Convert.ChangeType(v, typeof(T));
+        }
     }
 
     public class Make2DArrayTests
@@ -146,6 +152,19 @@ namespace LeetCode.Problems
                 i => Assert.Equal(2, i),
                 i => Assert.Equal(3, i));
         }
+
+        [Fact]
+        public void when_string_with_quotes()
+        {
+            var result = ArrayCreators.Make2DArray<string>(@"[[""a"",""b"",""c""]]");
+
+            var arr = Assert.Single(result);
+            Assert.Collection(arr,
+                i => Assert.Equal("a", i),
+                i => Assert.Equal("b", i),
+                i => Assert.Equal("c", i)
+                );
+        }
     }
 
     public class MakeArrayTests
@@ -177,7 +196,7 @@ namespace LeetCode.Problems
         public void when_mupltiple_item()
         {
             var result = ArrayCreators.MakeArray<int>("[1,-2,3]");
-            Assert.Collection(result, 
+            Assert.Collection(result,
                 i => Assert.Equal(1, i),
                 i => Assert.Equal(-2, i),
                 i => Assert.Equal(3, i));
@@ -187,6 +206,26 @@ namespace LeetCode.Problems
         public void when_diff_type()
         {
             var result = ArrayCreators.MakeArray<string>("[a,be,c]");
+            Assert.Collection(result,
+                i => Assert.Equal("a", i),
+                i => Assert.Equal("be", i),
+                i => Assert.Equal("c", i));
+        }
+
+        [Fact]
+        public void when_strings_with_quotes_type()
+        {
+            var result = ArrayCreators.MakeArray<string>(@"[""a"",""be"",""c""]");
+            Assert.Collection(result,
+                i => Assert.Equal("a", i),
+                i => Assert.Equal("be", i),
+                i => Assert.Equal("c", i));
+        }
+
+        [Fact]
+        public void when_strings_with_quotes_and_whitespaces_type()
+        {
+            var result = ArrayCreators.MakeArray<string>(@"[""a"",""be"",""c""]");
             Assert.Collection(result,
                 i => Assert.Equal("a", i),
                 i => Assert.Equal("be", i),
