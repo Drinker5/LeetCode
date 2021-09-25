@@ -165,6 +165,28 @@ namespace LeetCode.Problems
                 i => Assert.Equal("c", i)
                 );
         }
+
+        [Fact]
+        public void when_multiline()
+        {
+            var result = ArrayCreators.Make2DArray<int>(@"[[0,1,1],
+                                                            [1,1,1],
+                                                            [1,0,0]],");
+            Assert.Collection(result,
+                i => Assert.Collection(i, 
+                    j => Assert.Equal(0, j),
+                    j => Assert.Equal(1, j),
+                    j => Assert.Equal(1, j)),
+                i => Assert.Collection(i,
+                    j => Assert.Equal(1, j),
+                    j => Assert.Equal(1, j),
+                    j => Assert.Equal(1, j)),
+                i => Assert.Collection(i,
+                    j => Assert.Equal(1, j),
+                    j => Assert.Equal(0, j),
+                    j => Assert.Equal(0, j))
+                );
+        }
     }
 
     public class MakeArrayTests
