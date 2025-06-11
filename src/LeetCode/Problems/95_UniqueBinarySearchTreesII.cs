@@ -124,7 +124,7 @@ namespace LeetCode.Problems._21_09_Week1
         {
             var res = s.GenerateTrees(1);
 
-            Assert.Equal(1, res.Count);
+            Assert.Single(res);
             HassTree(res, new int?[] { 1 });
         }
 

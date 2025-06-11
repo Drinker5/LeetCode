@@ -537,7 +537,7 @@ namespace LeetCode.Problems
             };
 
             var res = s.OuterTrees(l.ToArray());
-            Assert.Equal(1, res.Length);
+            Assert.Single(res);
             Assert.Contains(res, EqualToPoint(1, 1));
         }
 
