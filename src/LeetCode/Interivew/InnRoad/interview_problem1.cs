@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using Xunit;
-
-namespace LeetCode.Interview.InnRoad
+﻿namespace LeetCode.Interview.InnRoad
 {
     public class Problem1
     {

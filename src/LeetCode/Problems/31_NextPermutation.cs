@@ -1,8 +1,3 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using Xunit;
-
 namespace TestProject1
 {
     public class _31_NextPermutation

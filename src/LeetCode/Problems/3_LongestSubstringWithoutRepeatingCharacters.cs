@@ -1,7 +1,4 @@
-﻿using System.Collections.Generic;
-using Xunit;
-
-namespace LeetCode.Problems
+﻿namespace LeetCode.Problems
 {
     public class _3_LongestSubstringWithoutRepeatingCharacters
     {

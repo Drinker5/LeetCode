@@ -1,6 +1,4 @@
-﻿using Xunit;
-
-namespace LeetCode.Structures
+﻿namespace LeetCode.Structures
 {
     class Stack
     {

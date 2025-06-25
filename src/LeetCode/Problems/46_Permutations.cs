@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using Xunit;
-
-namespace LeetCode.Problems
+﻿namespace LeetCode.Problems
 {
     class _46_Permutations
     {

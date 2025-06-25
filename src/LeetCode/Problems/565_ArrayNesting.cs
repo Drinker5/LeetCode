@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using Xunit;
-
-namespace LeetCode.Problems._21_09_Week1
+﻿namespace LeetCode.Problems._21_09_Week1
 {
     public class _565_ArrayNesting
     {

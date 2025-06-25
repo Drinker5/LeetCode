@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using Xunit;
-
-namespace LeetCode.Structures
+﻿namespace LeetCode.Structures
 {
     public class BinarySearchTree
     {

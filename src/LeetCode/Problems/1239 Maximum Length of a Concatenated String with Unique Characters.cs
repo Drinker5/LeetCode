@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using Xunit;
-
-namespace LeetCode.Problems
+﻿namespace LeetCode.Problems
 {
     public class _1239_Maximum_Length_of_a_Concatenated_String_with_Unique_Characters
     {

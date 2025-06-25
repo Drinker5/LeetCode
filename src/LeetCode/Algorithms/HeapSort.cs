@@ -1,8 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using Xunit;
-
-namespace LeetCode.Algorithms
+﻿namespace LeetCode.Algorithms
 {
     public class HeapSort
     {

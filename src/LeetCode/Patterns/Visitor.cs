@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace LeetCode.Patterns.Visitor
+﻿namespace LeetCode.Patterns.Visitor
 {
     class Client
     {

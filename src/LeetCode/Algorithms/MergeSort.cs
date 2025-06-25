@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using Xunit;
-
-namespace LeetCode.Algorithms
+﻿namespace LeetCode.Algorithms
 {
     class MergeSort
     {

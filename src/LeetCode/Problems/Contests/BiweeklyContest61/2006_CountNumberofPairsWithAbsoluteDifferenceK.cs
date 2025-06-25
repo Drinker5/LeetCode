@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using Xunit;
-
-namespace LeetCode.Problems.BiweeklyContest61
+﻿namespace LeetCode.Problems.BiweeklyContest61
 {
     public class LeetCodeProblem1
     {

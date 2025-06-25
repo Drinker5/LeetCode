@@ -1,6 +1,4 @@
-﻿using Xunit;
-
-namespace LeetCode.Problems
+﻿namespace LeetCode.Problems
 {
     public class _2_AddTwoNumbers
     {

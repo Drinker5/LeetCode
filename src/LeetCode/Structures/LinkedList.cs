@@ -1,5 +1,3 @@
-using Xunit;
-
 namespace LeetCode.Structures
 {
     public class LinkedList
